@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from afwf_google_suggest.handlers.google_suggest import handler
+from afwf_google_suggest.handlers.google_suggest import google_suggest_handler
 
 
 def test():
-    sf = handler.main(query="tesla")
+    sf = google_suggest_handler.main(query="tesla")
     for item in sf.items:
         assert "tesla" in item.title
 
