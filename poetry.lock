@@ -2368,16 +2368,6 @@ lint = ["docutils-stubs", "flake8", "mypy"]
 test = ["pytest"]
 
 [[package]]
-name = "sqlitedict"
-version = "2.1.0"
-description = "Persistent dict in Python, backed up by sqlite3 and pickle, multithread-safe."
-optional = false
-python-versions = "*"
-files = [
-    {file = "sqlitedict-2.1.0.tar.gz", hash = "sha256:03d9cfb96d602996f1d4c2db2856f1224b96a9c431bdd16e78032a72940f9e8c"},
-]
-
-[[package]]
 name = "stack-data"
 version = "0.6.3"
 description = "Extract data from python stack frames and tracebacks for informative displays"
@@ -2735,4 +2725,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "4899f96fa493abc47c6e372940edbb43e4f96e7446525264198d93fc61aa50b8"
+content-hash = "6ccf55b87101616a2ce39b14a1987c5973e8de8652b644ad4674948e3c787035"

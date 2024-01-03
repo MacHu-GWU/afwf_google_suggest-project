@@ -52,7 +52,53 @@
 				<false/>
 			</dict>
 		</array>
+		<key>1A86A25D-B6FD-421B-A0D4-34E0F392B538</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DC8B1EFB-9C66-460D-B83E-5FD5C944F23B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>CC2B4CFF-8F4D-4491-8A4C-70865680DA8B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>8EC29356-A192-47B7-86AE-042BCE1E8DC8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DC8B1EFB-9C66-460D-B83E-5FD5C944F23B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>CC2B4CFF-8F4D-4491-8A4C-70865680DA8B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C0035251-5B13-4D9C-9329-0361BB1C3C6E</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -370,6 +416,104 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
+				<string>trans-es</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>2</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>/usr/bin/python3 main.py 'trans_es {query}'</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string>main.py</string>
+				<key>subtext</key>
+				<string>Google translate English to Spanish</string>
+				<key>title</key>
+				<string>trans-es</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>1A86A25D-B6FD-421B-A0D4-34E0F392B538</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>trans-fr</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>2</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>/usr/bin/python3 main.py 'trans_fr {query}'</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string>main.py</string>
+				<key>subtext</key>
+				<string>Google translate English to French</string>
+				<key>title</key>
+				<string>trans-fr</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>C0035251-5B13-4D9C-9329-0361BB1C3C6E</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
 				<string>en-wbs</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
@@ -515,7 +659,7 @@ A new option now exists for Script Filters, "Alfred filters results". This allow
 			<key>xpos</key>
 			<integer>90</integer>
 			<key>ypos</key>
-			<integer>325</integer>
+			<integer>535</integer>
 		</dict>
 		<key>0C63B26C-777C-44FA-BA1A-8A996803A18E</key>
 		<dict>
@@ -523,6 +667,13 @@ A new option now exists for Script Filters, "Alfred filters results". This allow
 			<integer>90</integer>
 			<key>ypos</key>
 			<integer>10</integer>
+		</dict>
+		<key>1A86A25D-B6FD-421B-A0D4-34E0F392B538</key>
+		<dict>
+			<key>xpos</key>
+			<integer>90</integer>
+			<key>ypos</key>
+			<integer>220</integer>
 		</dict>
 		<key>4713082C-021E-4A71-9FA1-BFB72A2972A7</key>
 		<dict>
@@ -536,7 +687,7 @@ A new option now exists for Script Filters, "Alfred filters results". This allow
 			<key>xpos</key>
 			<integer>90</integer>
 			<key>ypos</key>
-			<integer>430</integer>
+			<integer>640</integer>
 		</dict>
 		<key>ACA65D7D-CAEE-4895-AC17-EBDD67A5DF7C</key>
 		<dict>
@@ -545,12 +696,19 @@ A new option now exists for Script Filters, "Alfred filters results". This allow
 			<key>ypos</key>
 			<integer>10</integer>
 		</dict>
+		<key>C0035251-5B13-4D9C-9329-0361BB1C3C6E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>90</integer>
+			<key>ypos</key>
+			<integer>325</integer>
+		</dict>
 		<key>CC23F823-7BDD-4989-9BF4-26519683489C</key>
 		<dict>
 			<key>xpos</key>
 			<integer>90</integer>
 			<key>ypos</key>
-			<integer>220</integer>
+			<integer>430</integer>
 		</dict>
 		<key>CC2B4CFF-8F4D-4491-8A4C-70865680DA8B</key>
 		<dict>

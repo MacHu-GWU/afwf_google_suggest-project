@@ -10,7 +10,8 @@ from rich import print as rprint
 verbose = True
 # verbose = False
 
-handler = google_suggest.handler
+# handler = google_suggest.google_suggest_handler
+handler = google_suggest.trans_cn_handler
 query = "tesla"
 
 res = handler.run_script_command(path_bin_python, dir_workflow, query, verbose=verbose)

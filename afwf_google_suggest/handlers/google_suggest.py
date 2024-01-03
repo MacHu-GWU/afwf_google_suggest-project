@@ -64,17 +64,33 @@ class Handler(afwf.Handler):
     def main(self, query: str) -> afwf.ScriptFilter:
         suggestion_list = get_suggestion_list(query)
         sf = afwf.ScriptFilter()
+
+        # always add the original query as the first item
+        url_safe_query = query.replace(" ", "+")
+        search_url = self.search_url_template.format(query=url_safe_query)
+        item = afwf.Item(
+            uid=f"{query}-itself",
+            title=query,
+            subtitle=self.subtitle_template.format(suggestion=query),
+            arg=query,
+            autocomplete=query,
+        ).open_url(search_url)
+        sf.items.append(item)
+
+        # add more items from suggestions
         for suggestion in suggestion_list:
             url_safe_query = suggestion.replace(" ", "+")
-            google_search_url = self.search_url_template.format(query=url_safe_query)
-            item = afwf.Item(
-                uid=suggestion,
-                title=suggestion,
-                subtitle=self.subtitle_template.format(suggestion=suggestion),
-                arg=suggestion,
-                autocomplete=suggestion,
-            ).open_url(google_search_url)
-            sf.items.append(item)
+            search_url = self.search_url_template.format(query=url_safe_query)
+            if suggestion != query:
+                item = afwf.Item(
+                    uid=suggestion,
+                    title=suggestion,
+                    subtitle=self.subtitle_template.format(suggestion=suggestion),
+                    arg=suggestion,
+                    autocomplete=suggestion,
+                ).open_url(search_url)
+                sf.items.append(item)
+
         return sf
 
     def parse_query(self, query: str) -> T.Dict[str, T.Any]:
@@ -91,6 +107,16 @@ trans_cn_handler = Handler(
     id="trans_cn",
     search_url_template="https://translate.google.com/?sl=en&tl=zh-CN&text={query}&op=translate",
     subtitle_template="Translate '{suggestion}' to zh-CN",
+)
+trans_es_handler = Handler(
+    id="trans_es",
+    search_url_template="https://translate.google.com/?sl=en&tl=es&text={query}&op=translate",
+    subtitle_template="Translate '{suggestion}' to es-ES",
+)
+trans_fr_handler = Handler(
+    id="trans_fr",
+    search_url_template="https://translate.google.com/?sl=en&tl=fr&text={query}&op=translate",
+    subtitle_template="Translate '{suggestion}' to fr-FR",
 )
 en_wbs_handler = Handler(
     id="en_wbs",
